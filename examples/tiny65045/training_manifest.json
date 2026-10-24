@@ -1,0 +1,98 @@
+{
+  "particles": 32,
+  "structures": [
+    {
+      "structure_id": 0,
+      "structure": "EMD33026",
+      "source_file": "emd33026_grouped_train.mat",
+      "source_indices": [
+        0,
+        6,
+        12,
+        19,
+        1060,
+        1066,
+        1072,
+        1079,
+        5800,
+        5806,
+        5812,
+        5819,
+        2140,
+        2146,
+        2152,
+        2159
+      ],
+      "source_group_ids": [
+        1,
+        1,
+        1,
+        1,
+        54,
+        54,
+        54,
+        54,
+        291,
+        291,
+        291,
+        291,
+        108,
+        108,
+        108,
+        108
+      ]
+    },
+    {
+      "structure_id": 1,
+      "structure": "EMD70734",
+      "source_file": "emd33026_grouped_val.mat",
+      "source_indices": [
+        0,
+        6,
+        12,
+        19,
+        980,
+        986,
+        992,
+        999,
+        40,
+        46,
+        52,
+        59,
+        700,
+        706,
+        712,
+        719
+      ],
+      "source_group_ids": [
+        1,
+        1,
+        1,
+        1,
+        50,
+        50,
+        50,
+        50,
+        3,
+        3,
+        3,
+        3,
+        36,
+        36,
+        36,
+        36
+      ]
+    }
+  ],
+  "view_groups_per_structure": 4,
+  "particles_per_group": 4,
+  "clean_projections": true,
+  "training_noise_snr": [
+    0.07,
+    0.2
+  ],
+  "training_blur_sigma": 3,
+  "test_structure": "EMD65045",
+  "test_particles": 32,
+  "purpose": "workflow smoke test, not a benchmark"
+}

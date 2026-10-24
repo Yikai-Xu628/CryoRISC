@@ -1,0 +1,5 @@
+numpy==1.26.4
+scipy==1.15.3
+torch==2.0.0
+escnn==1.0.13
+lie-learn==0.0.1.post1

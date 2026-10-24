@@ -1,0 +1,72 @@
+{
+  "seed": 20261014,
+  "architecture": {
+    "embedding_dim": 96,
+    "rotations": 16,
+    "full_c16": true,
+    "field_multiplier": 1.5,
+    "residual_blocks": 1,
+    "multiscale_radial": false,
+    "radial_bins": 4,
+    "preserve_regular_fields": false
+  },
+  "from_random_initialization": true,
+  "pretrained_checkpoint": null,
+  "encoder_and_adapter_trainable": true,
+  "old_preservation_loss": false,
+  "train_structures": [
+    "EMD33026",
+    "EMD70734",
+    "EMD22689",
+    "EMD20841",
+    "EMD3225"
+  ],
+  "train_samples": 21600,
+  "seen_validation_samples": 2400,
+  "validation_split": "held-out view groups within the five training structures",
+  "validation_fraction": 0.1,
+  "test_structure": "EMD65045",
+  "test_used_for_selection": false,
+  "batch_size": 128,
+  "structures_per_batch": 2,
+  "groups_per_structure": 16,
+  "samples_per_group": 4,
+  "train_snr": [
+    0.07,
+    0.2
+  ],
+  "train_scale": [
+    0.9,
+    1.1
+  ],
+  "max_shift": 4,
+  "blur_sigma": 3,
+  "rotation_consistency_weight": 0.5,
+  "rotation_subset": 16,
+  "rotation_angles": [
+    90,
+    180,
+    270
+  ],
+  "optimizer": "AdamW",
+  "peak_lr": 0.0008,
+  "weight_decay": 0.0001,
+  "gradient_clip": 2,
+  "amp": true,
+  "amp_dtype": "torch.bfloat16",
+  "warmup_epochs": 5,
+  "lr_schedule": "cosine",
+  "minimum_lr": 4e-05,
+  "validation_snrs": [
+    0.03,
+    0.1
+  ],
+  "validation_every_epochs": 2,
+  "selection": "mean held-out view-group macro precision10_at8deg over validation SNRs",
+  "early_stop_minimum_epoch": 30,
+  "early_stop_patience_epochs": 16,
+  "input_files": [
+    "multistructure_v2_train.npz"
+  ],
+  "planned_epochs": 60
+}

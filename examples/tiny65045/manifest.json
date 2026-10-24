@@ -1,0 +1,32 @@
+{
+  "structure": "EMD-65045",
+  "purpose": "workflow smoke test, not a benchmark",
+  "particles": 32,
+  "source_particles": 5000,
+  "size": 128,
+  "apix": 2.8125,
+  "source_stack_name": "aspire_input_snr01.mrcs",
+  "source_stack_sha256": "2fb12bd7b9090fcaff37ede8e2a3f7bd1406595af676a2c5ffaf49de67c3fb9b",
+  "selection": "floor((arange(count)+0.5)*source_particles/count), zero-based",
+  "source_noise_snr": 0.1,
+  "noise_added": false,
+  "particle_values_unchanged": true,
+  "directions": "actual per-particle simulation directions; evaluation only",
+  "classification_profile": "tiny demonstration",
+  "pretrained_weights_included": false,
+  "classes": 8,
+  "files": {
+    "examples/tiny65045/particles.mrcs": {
+      "bytes": 2098176,
+      "sha256": "3f2f689156e33b69a09c791f2ad98f9c6a9048340ac0ff8a89ef63d8ddcb1090"
+    },
+    "examples/tiny65045/viewdirs.npy": {
+      "bytes": 512,
+      "sha256": "421a66464de4a17fa26bdadcdd9803d01eea22c5531b7a7bd75635a302ad76d7"
+    },
+    "examples/tiny65045/source_indices.npy": {
+      "bytes": 384,
+      "sha256": "e656891416fbed52efb119b34df5150f3d7bb5a0015e255caf13a1d5a42faebf"
+    }
+  }
+}

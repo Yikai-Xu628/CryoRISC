@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cryorisc"
+version = "0.1.0"
+description = "Rotation-invariant feature guidance and image-guided candidate refinement for cryo-EM 2D classification"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.23,<2", "scipy>=1.9", "torch>=2.0", "escnn==1.0.13"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "build"]
+data = ["h5py>=3.8"]
+figures = ["pywin32>=306; sys_platform == 'win32'", "Pillow>=9"]
+
+[project.scripts]
+cryorisc = "cryorisc.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
