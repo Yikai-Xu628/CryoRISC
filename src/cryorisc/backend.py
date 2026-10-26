@@ -114,7 +114,7 @@ def final_average(config, key, inp, fit, particles, fixed_labels, folder, class_
         raise AssertionError("Final candidate crosses fixed class boundary")
     mask = circular_soft_mask(config["size"], config["radius"], config["edge"], device)
     bg = mask < .05
-    low, high, temperature = (.018, .115, .055) if key == "10028" else (.015, .10, .05)
+    low, high, temperature = (.018, .115, .05) if key == "10028" else (.015, .10, .05)
     templ = bandpass(torch.from_numpy(fit["templates"]).to(device), config["size"], low, high)*mask
     templ -= (templ*mask).sum((1, 2), keepdim=True)/mask.sum()
     templ /= torch.sqrt((templ.square()*mask).sum((1, 2), keepdim=True).clamp_min(1e-8))
